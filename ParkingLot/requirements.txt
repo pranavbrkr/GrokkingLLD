@@ -1,0 +1,9 @@
+How are customers paying? (To agent or automated exit panel)
+Payment methods i.e. cash, card, etc
+How many types of vehicles / spots?
+How is the division of parking spots among the desired types
+If parking spot booked for one type, can another vehicle occupy the spot
+Pricing?
+Differential rates based on hours?
+Pricing same for all vehicles or not?
+ 
