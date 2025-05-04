@@ -1,0 +1,8 @@
+Member should be able to search by their title, author and subject category as well as date
+Each book should have unique ID and rack number to locate it
+Could be more than one copy of the book
+System should be able to see who took the book and what books are checked out
+Limit on number of books and days for which books can be kept by Member
+Collect fines if books are returned after the due date
+Member should be able to reserve the books that are not currently available
+System sends notifications whenever the book becomes available
