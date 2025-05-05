@@ -31,7 +31,7 @@ class AccountStatus(Enum):
 
 class Address:
   def __init__(self, street, city, state, zip_code, country):
-    self._street_adress = street
+    self._street_address = street
     self._city = city
     self._state = state
     self._zip_code = zip_code
