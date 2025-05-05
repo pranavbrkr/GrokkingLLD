@@ -1,9 +1,12 @@
+from models import ReservationStatus
+
 class BookReservations:
-  def __init(self, creation_date, status, item_id, member_id):
-    self._creation_date = creation_date
-    self._status = status
-    self._item_id = item_id
-    self._member_id = member_id
+  def __init__(self, creation_date, item_id, member_id):
+      self._creation_date = creation_date
+      self._status = ReservationStatus.WAITING
+      self._item_id = item_id
+      self._member_id = member_id
+
   
   def fetch_reservation_details(self, book_item_id):
     return self._item_id, self._member_id, self._status
@@ -26,10 +29,13 @@ class BookLending:
 
 
 class Fine:
-  def __init__(self, creation_date, book_item_id, member_id):
+  def __init__(self, creation_date, book_item_id, member_id, amount):
     self._creation_date = creation_date
     self._book_item_id = book_item_id
-    self.member_id = member_id
+    self._member_id = member_id
+    self._amount = amount
+    self._paid = False
 
-  def collect_fine(self, member_id, days):
-    None
+  def collect_fine(self):
+    self._paid = True
+    print(f"Fine of ${self._amount} collected from member {self._member_id}")

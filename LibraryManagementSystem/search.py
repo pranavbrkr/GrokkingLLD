@@ -42,7 +42,7 @@ class Catalog(Search):
     self._book_titles.setdefault(book._title, set()).add(book_item)
 
     for author in book._authors:
-      self._book_authors.setdefault(author._name, set()).add(book_item)
+      self._book_authors.setdefault(author, set()).add(book_item)
     
     self._book_subjects.setdefault(book._subject, set()).add(book_item)
 

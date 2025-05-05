@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from .models import *
+from models import *
 
 class Book(ABC):
   def __init__(self, isbn, title, subject, publisher, language, number_of_pages, book_format):
@@ -49,4 +49,4 @@ class Rack:
     self._book_items = []
   
   def add_book_item(self, book_item):
-    None
+    self._book_items.append(book_item)

@@ -1,11 +1,11 @@
 from abc import ABC, abstractmethod
 import datetime
 
-from LibraryManagementSystem.book_transactions import BookLending, BookReservations
-from LibraryManagementSystem.library import Library
-from LibraryManagementSystem.notification import EmailNotification
-from .models import *
-from .constants import *
+from book_transactions import BookLending, BookReservations
+from library import Library
+from notification import EmailNotification, PostalNotification
+from models import *
+from constants import *
 
 class User(ABC):
   def __init__(self, id, password, person, status=AccountStatus.ACTIVE):
@@ -61,7 +61,7 @@ class Member(User):
     print(f"Book {book_item.id} reserved by member {self._id}")
     return True
   
-  def increment_toal_books_checked_out(self):
+  def increment_total_books_checked_out(self):
     None
   
   def checkout_book_item(self, book_item):

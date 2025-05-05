@@ -1,4 +1,4 @@
-from LibraryManagementSystem.search import Catalog
+from search import Catalog
 
 
 class Library:
